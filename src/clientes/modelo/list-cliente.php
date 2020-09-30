@@ -11,7 +11,7 @@
             $colunas = $requestData['columns'];
 
             //1ª etapa para a consulta do DataTable
-            $sql = "SELECT idcliente, nome, ativo, DATE_FORMAT(datamodificacao, '%d/%m/%Y %H:%i:%s') as datamodificacao FROM clientes WHERE 1=1 ";
+            $sql = "SELECT idcliente, nome, email, telefone, DATE_FORMAT(datamodificacao, '%d/%m/%Y %H:%i:%s') as datamodificacao, ativo FROM clientes WHERE 1=1 ";
 
             $resultado = mysqli_query($conexao, $sql);
             $totalRegistros = mysqli_num_rows($resultado);
