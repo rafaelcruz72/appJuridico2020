@@ -8,7 +8,8 @@
 
         if(!empty($requestData['nome']) && !empty($requestData['ativo'])){
 
-            //$requestData = array_map('uft8_decode', $requestData);
+            //$requestData = array_map('utf8_encode', $requestData);
+
             $data = str_replace('/','-',$requestData['dataagora']);
             $data = date('Y-m-d H:i:s', strtotime($data));
             $requestData['ativo'] = $requestData['ativo'] == 'on' ? 'S' : 'N';
@@ -44,4 +45,4 @@
         );
     }
 
-    echo json_encode($dados);
+    echo json_encode($dados, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE);
