@@ -31,6 +31,6 @@ $(document).ready(function(){
                $('#table-cliente').DataTable().ajax.reload()
            } 
         })
-
+        
     })
 })

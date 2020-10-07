@@ -39,7 +39,7 @@
             $resultado = mysqli_query($conexao, $sql);
             $dados = array();
             while($linha = mysqli_fetch_assoc($resultado)){
-                $dados[] = array_map('utf8_encode', $linha);
+                $dados[] = $linha; //array_map('utf8_encode', $linha);
             }
 
             $json_data = array(
