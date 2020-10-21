@@ -15,6 +15,7 @@ $(document).ready(function(){
             $('#dataagora').val(datacriacao)
         })
 
+        $('.btn-update').hide()
         $('.btn-save').show()
 
         $('#modal-cliente').modal('show')
