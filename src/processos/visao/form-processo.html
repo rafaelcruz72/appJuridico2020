@@ -1,0 +1,39 @@
+<form class="form" id="form-processo" name="form-processo">
+    <div class="row">
+        <div class="form-group col-3">
+            <label for="" class="col-form-label font-weight-bold">Nº Processo:</label>
+            <input type="text" id="num_processo" name="num_processo" class="form-control">
+        </div>
+        <div class="form-group col-9">
+            <label class="col-form-label font-weight-bold">Título:</label>
+            <input type="text" class="form-control" id="titulo" name="titulo">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-6">
+            <label for="" class="col-form-label font-weight-bold">Tipo Processo:</label>
+            <select name="idtipo_processo" id="idtipo_processo" class="form-control"></select>
+        </div>
+        <div class="form-group col-6">
+            <label for="" class="col-form-label font-weight-bold">Cliente:</label>
+            <select name="idcliente" id="idcliente" class="form-control"></select>
+        </div>       
+    </div>
+    <div class="row">
+        <div class="form-group col-9">
+            <label for="" class="col-form-label font-weight-bold">Descrição:</label>
+            <textarea class="form-control" rows="5" id="descricao" name="descricao"></textarea>
+        </div>
+        <div class="form-group col-3">
+            <label for="" class="col-form-label font-weight-bold">Data Processo:</label>
+            <input type="date" class="form-control" id="dataprocesso" name="dataprocesso">
+        </div>       
+    </div>
+    <div class="form-group">
+        <label>Arquivo</label>
+        <input type="file" name="arquivo" id="arquivo" class="form-control-file">
+    </div>
+    <div class="form-group">
+        <input type="hidden" name="idprocesso" id="idprocesso">
+    </div>
+</form>

@@ -7,22 +7,34 @@
         $requestData = $_REQUEST;
 
         $id = isset($requestData['idcliente']) ? $requestData['idcliente'] : '';
-            
-        $sql = "DELETE FROM clientes WHERE idcliente = $id";
 
+        $sql = "SELECT * FROM PROCESSOS WHERE idcliente = $id";
         $resultado = mysqli_query($conexao, $sql);
-        if($resultado){
+
+        if($resultado && mysqli_num_rows($resultado) > 0){
             $dados = array(
-                'tipo' => TP_MSG_SUCCESS,
-                 'mensagem' => "Cliente deletado com sucesso."
+                'tipo' => TP_MSG_INFO,
+                'mensagem' => "Cliente não pode ser deletado possui processo(s) relacionado(s)."
             );
         } else {
-            $dados = array(
-                'tipo' => TP_MSG_ERROR,
-                 'mensagem' => "Não foi possível deletar o cliente."
-            );
+            
+            $sql = "DELETE FROM clientes WHERE idcliente = $id";
+
+            $resultado = mysqli_query($conexao, $sql);
+            if($resultado){
+                $dados = array(
+                    'tipo' => TP_MSG_SUCCESS,
+                    'mensagem' => "Cliente deletado com sucesso."
+                );
+            } else {
+                $dados = array(
+                    'tipo' => TP_MSG_ERROR,
+                    'mensagem' => "Não foi possível deletar o cliente."
+                );
+            }
+
         }
-    
+
         mysqli_close($conexao);
 
     } else {

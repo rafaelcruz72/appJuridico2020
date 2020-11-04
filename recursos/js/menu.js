@@ -7,5 +7,9 @@ $(document).ready(function(){
     $('.list-tipo_processo').click(function(){
         $('.conteudo').load('src/tipos_processos/visao/list-tipo_processo.html')
     })
+
+    $('.list-processo').click(function(){
+        $('.conteudo').load('src/processos/visao/list-processo.html');
+    })
     
 })

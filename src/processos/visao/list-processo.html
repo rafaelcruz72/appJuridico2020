@@ -1,25 +1,26 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h3 class="font-weight-bold">Clientes</h3>
+            <h3 class="font-weight-bold">Processos</h3>
         </div>
         <div class="col text-right">
-            <button class="btn btn-primary btn-sm btn-new-cliente"><i class="fas fa-plus"></i> Novo Cliente</button>
+            <button class="btn btn-primary btn-sm btn-new-processo"><i class="fas fa-plus"></i> Novo Processo</button>
         </div>
     </div>
     <hr>
     <div class="row">
         <div class="col-12">
-            <table class="table table-hover table-responsive-sm display compact cell-border" id="table-cliente"
+            <table class="table table-hover table-responsive-sm display compact cell-border" id="table-processo"
                 style="width: 100%;">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">E-mail</th>
-                        <th scope="col">Telefone</th>
-                        <th scope="col">Atualização</th>
-                        <th scope="col">Ativo</th>
+                        <th scope="col">Nº Processo</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Data Processo</th> 
+                        <th scope="col">Data Encerramento</th> 
+                        <th scope="col">Tipo Processo</th>
+                        <th scope="col">Cliente</th>
                         <th scope="col">Operações</th>
                     </tr>
                 </thead>
@@ -29,16 +30,11 @@
 </div>
 
 <!-- Chamada dos js da camada Control -->
-<script src="src/clientes/controle/list-cliente.js"></script>
-<script src="src/clientes/controle/new-cliente.js"></script>
-<script src="src/clientes/controle/create-cliente.js"></script>
-<script src="src/clientes/controle/view-cliente.js"></script>
-<script src="src/clientes/controle/edit-cliente.js"></script>
-<script src="src/clientes/controle/update-cliente.js"></script>
-<script src="src/clientes/controle/delete-cliente.js"></script>
+<script src="src/processos/controle/new-processo.js"></script>
+<script src="src/processos/controle/create-processo.js"></script>
 
 <!-- Modal -->
-<div class="modal fade" id="modal-cliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal-processo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
