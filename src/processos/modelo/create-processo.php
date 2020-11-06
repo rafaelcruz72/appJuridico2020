@@ -27,7 +27,7 @@
             $novoNome = uniqid(time()) . '.' . $extensao; 
             $destino = $pasta . $novoNome;           
 
-            if(move_uploaded_file($nomeTemporario, $destino)){
+            if(move_uploaded_file($nomeTemporario, '../' . $destino)){
 
                 $sql = "INSERT INTO processos (num_processo, titulo, descricao, arquivo, dataprocesso, idtipo_processo, idcliente) VALUES('{$requestData['num_processo']}','{$requestData['titulo']}','{$requestData['descricao']}','{$destino}','{$requestData['dataprocesso']}','{$requestData['idtipo_processo']}','{$requestData['idcliente']}')";
 
