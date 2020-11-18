@@ -1,0 +1,5 @@
+# Bloqueia a listagem de diretórios.
+Options All -Indexes
+
+ErrorDocument 403 /appJuridico2020/erros/403.html
+ErrorDocument 404 /appJuridico2020/erros/error_404.html
