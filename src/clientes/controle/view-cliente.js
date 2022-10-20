@@ -43,6 +43,7 @@ $(document).ready(function(){
                     })
 
                     $('.btn-save').hide()
+                    console.log($('#modal-cliente'))
                     $('#modal-cliente').modal('show')
 
                 } else{
